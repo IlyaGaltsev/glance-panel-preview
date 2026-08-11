@@ -23,18 +23,12 @@
 Hover the island under the notch — the panel opens with your recent screenshots, media controls, and notes.
 
 <p align="center">
-  <a href="assets/demo.mp4" title="Play demo video">
-    <img src="assets/demo-poster.jpg" alt="GlancePanel opening under the MacBook notch" width="900" />
-  </a>
+  <img src="assets/demo.gif" alt="GlancePanel demo — panel opening under the MacBook notch" width="900" />
 </p>
 
 <p align="center">
-  <a href="assets/demo.mp4"><strong>▶ Watch demo</strong></a>
-  ·
-  <code>assets/demo.mp4</code>
+  <a href="assets/demo.mp4"><strong>Full demo (mp4)</strong></a>
 </p>
-
-<video src="assets/demo.mp4" poster="assets/demo-poster.jpg" width="900" controls playsinline></video>
 
 ## Requirements
 
