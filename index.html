@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GlancePanel — MacBook notch utility</title>
+    <meta
+      name="description"
+      content="GlancePanel turns your MacBook notch into a panel for screenshots, now playing, and notes. Hover to open."
+    />
+    <meta property="og:title" content="GlancePanel" />
+    <meta
+      property="og:description"
+      content="Screenshots, now playing, and notes — one hover from the notch."
+    />
+    <meta property="og:image" content="assets/hero-macbook.png" />
+    <link rel="icon" type="image/png" href="assets/icon-128.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand-mark" href="#top" aria-label="GlancePanel home">
+        <img src="assets/icon-128.png" alt="" width="28" height="28" />
+        <span>GlancePanel</span>
+      </a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a class="nav-cta" href="#download">Download</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            class="hero-photo"
+            src="assets/hero-macbook.png"
+            alt=""
+            fetchpriority="high"
+          />
+          <div class="hero-veil"></div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="brand-hero">GlancePanel</p>
+          <h1>Your notch, put to work.</h1>
+          <p class="lede">
+            Screenshots, now playing, and notes — one hover from the MacBook
+            notch.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="download/GlancePanel-1.0.0.zip"
+              >Download for Mac</a
+            >
+            <a class="btn btn-ghost" href="#how">See it open</a>
+          </div>
+          <p class="meta">macOS 14.6+ · Apple Silicon · Notarized</p>
+        </div>
+      </section>
+
+      <section class="demo" id="how">
+        <div class="section-intro">
+          <h2>Hover the island.</h2>
+          <p>The capsule expands into a panel under the notch — then collapses when you leave.</p>
+        </div>
+
+        <div class="demo-stage" data-demo>
+          <div class="bezel">
+            <div class="screen">
+              <div class="wallpaper"></div>
+              <div class="notch-hardware" aria-hidden="true"></div>
+
+              <div class="island" data-island>
+                <div class="island-shell">
+                  <div class="island-collapsed">
+                    <span class="lens"></span>
+                  </div>
+                  <div class="island-expanded">
+                    <aside class="sidebar">
+                      <button class="mod active" type="button" data-mod="shots" aria-label="Screenshots">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M3 16l5-4 4 3 3-2 6 5"/></svg>
+                      </button>
+                      <button class="mod" type="button" data-mod="play" aria-label="Playing">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                      </button>
+                      <button class="mod" type="button" data-mod="notes" aria-label="Notes">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h9l3 3v13H6z"/><path d="M15 4v3h3"/><path d="M8 11h8M8 15h6"/></svg>
+                      </button>
+                    </aside>
+                    <div class="panel-body">
+                      <div class="pane is-active" data-pane="shots">
+                        <div class="pane-head">
+                          <span>Screenshots</span>
+                          <span class="muted">Drag anywhere</span>
+                        </div>
+                        <div class="thumbs">
+                          <div class="thumb t1"></div>
+                          <div class="thumb t2"></div>
+                          <div class="thumb t3"></div>
+                        </div>
+                      </div>
+                      <div class="pane" data-pane="play">
+                        <div class="now">
+                          <div class="art"></div>
+                          <div>
+                            <p class="track">Midnight City</p>
+                            <p class="artist">M83</p>
+                          </div>
+                        </div>
+                        <div class="transport">
+                          <span></span><span class="play"></span><span></span>
+                        </div>
+                      </div>
+                      <div class="pane" data-pane="notes">
+                        <div class="note-row"><span>Ship landing</span><span class="dot"></span></div>
+                        <div class="note-row secret"><span>••••••••</span><span class="lock"></span></div>
+                        <div class="note-row"><span>Call Ilya</span><span class="dot"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="demo-hint">Move over the black capsule — or tap on mobile.</p>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="section-intro">
+          <h2>Three glances. Zero clutter.</h2>
+          <p>Everything lives under the notch so your desktop stays clear.</p>
+        </div>
+
+        <ul class="feature-list">
+          <li>
+            <h3>Screenshots</h3>
+            <p>Recent captures, ready to drag into Slack, Mail, Finder, or a browser.</p>
+          </li>
+          <li>
+            <h3>Playing</h3>
+            <p>Now playing controls for Music, Spotify, and browser media via MediaRemote.</p>
+          </li>
+          <li>
+            <h3>Notes</h3>
+            <p>Quick notes and secret notes — masked until you need them, copy on click.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="download" id="download">
+        <div class="download-inner">
+          <img class="download-icon" src="assets/icon.png" alt="" width="88" height="88" />
+          <h2>Get GlancePanel 1.0</h2>
+          <p>
+            Signed with Developer ID and notarized by Apple. Unzip, move to
+            Applications, hover the notch.
+          </p>
+          <a class="btn btn-primary btn-lg" href="download/GlancePanel-1.0.0.zip"
+            >Download GlancePanel-1.0.0.zip</a
+          >
+          <p class="meta">Requires a notched MacBook · macOS 14.6 or later</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 GlancePanel</span>
+      <span
+        >Developed by
+        <a href="https://however-digital.tech" rel="noopener noreferrer"
+          >however-digital.tech</a
+        ></span
+      >
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
