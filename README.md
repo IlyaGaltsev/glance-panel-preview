@@ -9,14 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://ilyagaltsev.github.io/glance-panel-preview/"><strong>Landing page</strong></a>
-  ·
-  <a href="download/GlancePanel-1.0.0.zip"><strong>Download 1.0.0</strong></a>
-  ·
-  <a href="https://however-digital.tech" target="_blank" rel="noopener noreferrer">however-digital.tech</a>
+  <a href="download/GlancePanel-1.0.0.zip"><strong>Download</strong></a>
 </p>
-
----
 
 ## In action
 
