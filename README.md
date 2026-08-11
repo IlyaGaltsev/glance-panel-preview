@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icon.png" alt="GlancePanel icon" width="96" height="96" />
+  <img src="assets/icon-rounded.png" alt="GlancePanel icon" width="96" height="96" />
 </p>
 
 <h1 align="center">GlancePanel</h1>
@@ -15,6 +15,26 @@
   ·
   <a href="https://however-digital.tech">however-digital.tech</a>
 </p>
+
+---
+
+## In action
+
+Hover the island under the notch — the panel opens with your recent screenshots, media controls, and notes.
+
+<p align="center">
+  <a href="assets/demo.mp4" title="Play demo video">
+    <img src="assets/demo-poster.jpg" alt="GlancePanel opening under the MacBook notch" width="900" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="assets/demo.mp4"><strong>▶ Watch demo</strong></a>
+  ·
+  <code>assets/demo.mp4</code>
+</p>
+
+<video src="assets/demo.mp4" poster="assets/demo-poster.jpg" width="900" controls playsinline></video>
 
 ---
 
@@ -59,7 +79,7 @@ Static landing site for [GitHub Pages](https://ilyagaltsev.github.io/glance-pane
 index.html      marketing page
 styles.css      layout & motion
 script.js       interactive notch demo
-assets/         icon, hero, island art
+assets/         icon, hero, demo recording
 download/       notarized app zip
 ```
 
