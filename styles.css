@@ -804,6 +804,184 @@ a {
   margin-top: 1rem;
 }
 
+/* Support page */
+
+.page-support .site-header {
+  background: linear-gradient(180deg, rgba(8, 9, 11, 0.85), transparent);
+}
+
+.support-main {
+  width: min(960px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(6rem, 14vh, 8rem) 0 clamp(4rem, 10vh, 6rem);
+}
+
+.support-intro {
+  max-width: 36rem;
+  margin-bottom: 2.5rem;
+}
+
+.support-eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.support-intro h1 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.5vw, 2.75rem);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.support-intro p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.support-intro a,
+.support-form-meta a,
+.support-aside-meta a {
+  color: var(--ink);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.support-toast {
+  margin-bottom: 1.5rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 14px;
+  background: rgba(120, 190, 140, 0.12);
+  border: 1px solid rgba(160, 220, 180, 0.25);
+  color: #d8f0e0;
+  font-size: 0.95rem;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-items: start;
+}
+
+.support-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.35rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+}
+
+.support-honey {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.support-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.support-form input,
+.support-form select,
+.support-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.98rem;
+  padding: 0.75rem 0.9rem;
+  outline: none;
+  transition: border-color 0.2s var(--ease);
+}
+
+.support-form textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.support-form input:focus,
+.support-form select:focus,
+.support-form textarea:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.support-form select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.45) 50%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.45) 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.support-form .btn {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+.support-form-meta {
+  margin: 0.25rem 0 0;
+  font-size: 0.82rem;
+  color: var(--faint);
+}
+
+.support-aside h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+}
+
+.support-faq {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.support-faq li {
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+.support-faq h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.support-faq p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.support-aside-meta {
+  margin: 1.5rem 0 0;
+  font-size: 0.8rem;
+  color: var(--faint);
+}
+
 /* Footer */
 
 .site-footer {
@@ -879,7 +1057,7 @@ a {
 }
 
 @media (max-width: 800px) {
-  .nav a:not(.nav-cta) {
+  .nav a:not(.nav-cta):not([href*="support"]) {
     display: none;
   }
 
@@ -917,5 +1095,9 @@ a {
     width: 100%;
     left: 0;
     transform: none;
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
   }
 }

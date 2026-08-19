@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support — GlancePanel</title>
+    <meta
+      name="description"
+      content="Get help with GlancePanel — MacBook notch utility. Contact support for bugs, install issues, and feedback."
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon-128.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-support">
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand-mark" href="index.html" aria-label="GlancePanel home">
+        <img src="assets/favicon-128.png" alt="" width="28" height="28" />
+        <span>GlancePanel</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how">How it works</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a class="nav-cta" href="index.html#download">Download</a>
+      </nav>
+    </header>
+
+    <main class="support-main">
+      <div class="support-intro">
+        <p class="support-eyebrow">Support</p>
+        <h1>Need a hand with GlancePanel?</h1>
+        <p>
+          Bugs, install questions, Gatekeeper prompts, or feature ideas — write
+          below and it goes straight to
+          <a href="mailto:ilyandreev771@gmail.com">ilyandreev771@gmail.com</a>.
+        </p>
+      </div>
+
+      <div id="sent" class="support-toast" hidden>
+        Thanks — your message was sent. We’ll get back to you by email.
+      </div>
+
+      <div class="support-grid">
+        <form
+          class="support-form"
+          action="https://formsubmit.co/ilyandreev771@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="GlancePanel Support" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://ilyagaltsev.github.io/glance-panel-preview/support.html?sent=1"
+          />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" class="support-honey" tabindex="-1" autocomplete="off" />
+
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" placeholder="Your name" />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              required
+              autocomplete="email"
+              placeholder="you@example.com"
+            />
+          </label>
+
+          <label>
+            <span>Topic</span>
+            <select name="topic" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="install">Install / Gatekeeper</option>
+              <option value="bug">Bug report</option>
+              <option value="feature">Feature request</option>
+              <option value="other">Something else</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea
+              name="message"
+              required
+              rows="6"
+              placeholder="What happened? macOS version, MacBook model, and steps help a lot."
+            ></textarea>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="support-form-meta">
+            Or email directly:
+            <a href="mailto:ilyandreev771@gmail.com?subject=GlancePanel%20Support"
+              >ilyandreev771@gmail.com</a
+            >
+          </p>
+        </form>
+
+        <aside class="support-aside">
+          <h2>Quick fixes</h2>
+          <ul class="support-faq">
+            <li>
+              <h3>“App can’t be opened”</h3>
+              <p>
+                GlancePanel is Developer ID signed and notarized. If macOS still
+                blocks it: System Settings → Privacy &amp; Security → Open Anyway.
+              </p>
+            </li>
+            <li>
+              <h3>Panel doesn’t appear</h3>
+              <p>
+                Needs a notched Apple Silicon MacBook and macOS 14.6+. Hover the
+                black capsule under the notch (not the menu bar icons).
+              </p>
+            </li>
+            <li>
+              <h3>Screenshots empty</h3>
+              <p>
+                Capture a new screenshot after installing, or check that your
+                Screenshots folder is the default Desktop / Screenshots location.
+              </p>
+            </li>
+          </ul>
+          <p class="support-aside-meta">
+            Site:
+            <a href="https://ilyagaltsev.github.io/glance-panel-preview/"
+              >ilyagaltsev.github.io/glance-panel-preview</a
+            >
+          </p>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 GlancePanel</span>
+      <span
+        ><a href="support.html">Support</a>
+        · Developed by
+        <a
+          href="https://however-digital.tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          >however-digital.tech</a
+        ></span
+      >
+    </footer>
+
+    <script>
+      (() => {
+        const params = new URLSearchParams(location.search);
+        if (params.get("sent") === "1") {
+          const toast = document.getElementById("sent");
+          if (toast) {
+            toast.hidden = false;
+            history.replaceState({}, "", "support.html");
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

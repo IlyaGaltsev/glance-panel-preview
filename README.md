@@ -9,7 +9,11 @@
 </p>
 
 <p align="center">
+  <a href="https://ilyagaltsev.github.io/glance-panel-preview/"><strong>Landing page</strong></a>
+  ·
   <a href="download/GlancePanel-1.0.0.zip"><strong>Download</strong></a>
+  ·
+  <a href="https://ilyagaltsev.github.io/glance-panel-preview/support.html"><strong>Support</strong></a>
 </p>
 
 ## In action
